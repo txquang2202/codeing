@@ -1,0 +1,146 @@
+#glow {
+    text-align: center;
+    font-size: 4em;
+    color: #d50ebe;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 110px #ff00de, 0 0 160px #ff00de;
+    }
+}
+
+body {
+    background-image: url("/img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.flower {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: pink;
+    animation: spin 5s linear infinite;
+}
+
+.petal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 60px;
+    background-color: white;
+    transform-origin: bottom center;
+}
+
+.petal:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.petal:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.petal:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+.center {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+#contener {
+    width: 2300px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner {
+    height: 180px;
+}
+
+.preloader {
+    animation: spin 2.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotateY(360deg);
+    }
+
+    100% {
+        -webkit-transform: rotateY(0deg);
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+}
+
+.image-container img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    width: 100px;
+    height: auto;
+
+}
